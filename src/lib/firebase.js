@@ -9,7 +9,7 @@ var firebaseConfig = {
     appId: "1:832232507706:web:f1ddd20aec2a972babe803"
   };
 
-firebase.initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
 export const auth = firebase.auth();

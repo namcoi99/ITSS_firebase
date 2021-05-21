@@ -1,9 +1,7 @@
-import React,{useState,useEffect} from 'react'
+import React, { useEffect, useState }  from 'react'
 
-/* スタイルシート */
 import './styles/main.css';
 
-/* コンポーネント */
 import Todo from './components/Todo';
 import Login from "./components/Login";
 
@@ -12,7 +10,7 @@ import { auth, storeUserInfo, updateUser } from "./lib/firebase";
 function App() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState([]);
-
+  
   useEffect(() => {
     auth.onAuthStateChanged(async (user) => {
       setLoading(false);
@@ -27,8 +25,8 @@ function App() {
   const logout = () => {
     auth.signOut();
   };
-
-
+  
+  
   const HeaderContent = () => {
     if (user) {
       return (
